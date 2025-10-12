@@ -1,6 +1,6 @@
 // API client for communicating with the Dengue AI backend
 
-const API_BASE_URL = "http://localhost:8002";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8002";
 
 export interface AnalysisResult {
   is_breeding_site: boolean;

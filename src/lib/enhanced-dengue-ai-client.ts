@@ -1,6 +1,6 @@
 // Advanced API client for the Dengue Guard AI FastAPI backend
 
-const API_BASE_URL = "http://localhost:8002";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8002";
 
 // Advanced AI Analysis Result Types
 export interface AdvancedAnalysisResult {

@@ -94,23 +94,27 @@ vercel --prod
 ## 📱 Features Overview
 
 ### 🏠 Home Page
+
 - Hero section with AI capabilities
 - Feature highlights
 - Call-to-action buttons
 
 ### 📊 Dashboard
+
 - Real-time dengue case statistics
 - Risk level indicators
 - Weather data integration
 - Interactive charts
 
 ### 🔍 Prediction
+
 - Image upload for breeding site detection
 - AI-powered risk assessment
 - Location-based predictions
 - Results visualization
 
 ### 📈 Reports
+
 - Historical data analysis
 - Trend visualizations
 - Export capabilities
@@ -136,6 +140,7 @@ dengue-ai-frontend/
 ## 🎨 UI Components
 
 Built with **Radix UI** and **Tailwind CSS**:
+
 - Modern, accessible components
 - Dark/light mode support
 - Responsive design
@@ -144,6 +149,7 @@ Built with **Radix UI** and **Tailwind CSS**:
 ## 🔌 API Integration
 
 The frontend communicates with the backend API:
+
 - RESTful API calls
 - Real-time data updates
 - Error handling
@@ -152,6 +158,7 @@ The frontend communicates with the backend API:
 ## 📊 Charts & Visualization
 
 Using **Recharts** for:
+
 - Line charts (trends)
 - Bar charts (statistics)
 - Pie charts (distributions)
@@ -184,7 +191,7 @@ Report issues at: https://github.com/arafateasin/dengue-ai-frontend/issues
 
 ## 📸 Screenshots
 
-*Add screenshots of your application here*
+_Add screenshots of your application here_
 
 ## 🌟 Live Demo
 
