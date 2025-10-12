@@ -1,0 +1,246 @@
+/* Malaysia Dengue AI System Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Healthcare & AI Inspired Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    /* Healthcare Blue - Primary brand color */
+    --healthcare-blue: 204 70% 53%;
+    --healthcare-blue-light: 204 70% 63%;
+    --healthcare-blue-dark: 204 70% 43%;
+
+    /* Eco Green - Success and safety */
+    --eco-green: 145 63% 42%;
+    --eco-green-light: 145 63% 52%;
+    --eco-green-dark: 145 63% 32%;
+
+    /* Dengue Alert Red - Warnings and high risk */
+    --alert-red: 0 68% 58%;
+    --alert-red-light: 0 68% 68%;
+    --alert-red-dark: 0 68% 48%;
+
+    /* Neutral Grays */
+    --gray-50: 210 20% 98%;
+    --gray-100: 210 20% 95%;
+    --gray-200: 214 20% 85%;
+    --gray-300: 214 20% 75%;
+    --gray-400: 214 15% 65%;
+    --gray-500: 214 15% 45%;
+    --gray-600: 214 20% 35%;
+    --gray-700: 214 25% 25%;
+    --gray-800: 214 30% 15%;
+    --gray-900: 214 35% 8%;
+
+    /* Design System Colors */
+    --primary: var(--healthcare-blue);
+    --primary-foreground: 0 0% 100%;
+    --primary-light: var(--healthcare-blue-light);
+    --primary-dark: var(--healthcare-blue-dark);
+
+    --secondary: var(--gray-100);
+    --secondary-foreground: var(--gray-700);
+
+    --success: var(--eco-green);
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: var(--alert-red);
+    --destructive-foreground: 0 0% 100%;
+
+    --muted: var(--gray-100);
+    --muted-foreground: var(--gray-500);
+
+    --accent: var(--gray-50);
+    --accent-foreground: var(--gray-700);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--foreground);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--foreground);
+
+    --border: var(--gray-200);
+    --input: var(--gray-200);
+    --ring: var(--healthcare-blue);
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--healthcare-blue)) 0%, hsl(var(--healthcare-blue-dark)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--eco-green)) 0%, hsl(var(--eco-green-dark)) 100%);
+    --gradient-alert: linear-gradient(135deg, hsl(var(--alert-red)) 0%, hsl(var(--alert-red-dark)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--healthcare-blue-light)) 0%, hsl(var(--eco-green-light)) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-primary: 0 4px 14px 0 hsl(var(--healthcare-blue) / 0.3);
+    --shadow-success: 0 4px 14px 0 hsl(var(--eco-green) / 0.3);
+
+    /* Animations */
+    --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--gray-900);
+    --foreground: var(--gray-100);
+
+    --card: var(--gray-800);
+    --card-foreground: var(--gray-100);
+
+    --popover: var(--gray-800);
+    --popover-foreground: var(--gray-100);
+
+    --primary: var(--healthcare-blue-light);
+    --primary-foreground: var(--gray-900);
+
+    --secondary: var(--gray-700);
+    --secondary-foreground: var(--gray-100);
+
+    --muted: var(--gray-700);
+    --muted-foreground: var(--gray-400);
+
+    --accent: var(--gray-700);
+    --accent-foreground: var(--gray-100);
+
+    --destructive: var(--alert-red-light);
+    --destructive-foreground: var(--gray-100);
+
+    --border: var(--gray-600);
+    --input: var(--gray-600);
+    --ring: var(--healthcare-blue-light);
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--healthcare-blue-light)) 0%, hsl(var(--healthcare-blue)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--eco-green-light)) 0%, hsl(var(--eco-green)) 100%);
+    --gradient-alert: linear-gradient(135deg, hsl(var(--alert-red-light)) 0%, hsl(var(--alert-red)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--healthcare-blue)) 0%, hsl(var(--eco-green)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Primary gradient button */
+  .btn-gradient-primary {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+  }
+
+  /* Success gradient button */
+  .btn-gradient-success {
+    background: var(--gradient-success);
+    box-shadow: var(--shadow-success);
+  }
+
+  /* Alert gradient button */
+  .btn-gradient-alert {
+    background: var(--gradient-alert);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-all);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  /* Custom shadows */
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .shadow-success {
+    box-shadow: var(--shadow-success);
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
